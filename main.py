@@ -5,18 +5,26 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+
 def pack():
-    client = paramiko.SSHClient()
-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(HOSTNAME, PORT, USERNAME, PASSWORD)
+    # client = paramiko.SSHClient()
+    # client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    # client.connect(HOSTNAME, PORT, USERNAME, PASSWORD)
+    #
+    #
+    # stdin, stdout, stderr = client.exec_command('tar cvzf cennik-inflacji.tgz cennik-inflacji')
+    #
+    # for line in stdout:
+    #     print(line.strip('\n'))
+    #
+    # client.close()
 
-    stdin, stdout, stderr = client.exec_command('tar cvzf cennik-inflacji.tgz cennik-inflacji')
 
-    for line in stdout:
-        print(line.strip('\n'))
-
-    client.close()
     return
+print(duda)
+print(HOSTNAME, PORT, USERNAME, PASSWORD)
+
+pack()
 
 
 def get_rsync():
@@ -24,7 +32,7 @@ def get_rsync():
     return
 
 
-print(ssaj())
+# print(get_rsync())
 
 
 def delete():
@@ -40,6 +48,6 @@ def delete():
     client.close()
     return
 
-# print(kasuj())
+# print(delete())
 
 # https://docs.python.org/2/library/subprocess.html#replacing-shell-pipeline
